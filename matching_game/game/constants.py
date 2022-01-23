@@ -1,0 +1,15 @@
+from ctypes.wintypes import RGB
+
+from raylibpy import WHITE
+
+
+TILE_WIDTH = 100
+TILE_HEIGHT = 100
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+SCREEN_TITLE = "Matching Game"
+BACKGROUND_COLOR = WHITE
+
+WHITE = (255, 255, 255)
+SALMON = (212, 77, 92)
