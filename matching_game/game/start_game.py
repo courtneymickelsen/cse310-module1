@@ -10,11 +10,6 @@ class StartGame(arcade.Window):
         # self.draw_squares()
         Tiles().create_tiles()
 
-    # def on_draw(self):
-    # check for a flip    
-    # check for a match
-    # cover tile spots
-
     def draw_squares(self):
         
         x = -15

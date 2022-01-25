@@ -9,3 +9,5 @@ class Tile(arcade.Sprite):
         
         super().__init__(self.path, scale, center_x= center_x, center_y= center_y, hit_box_algorithm="None")
 
+    def get_name(self):
+        return self.name

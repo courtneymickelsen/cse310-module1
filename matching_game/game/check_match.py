@@ -68,3 +68,11 @@ class CheckMatch():
         clicked_sprite_list = arcade.get_sprites_at_point((x, y), Tiles().sprite_list)
         for i in clicked_sprite_list:
             i._set_scale(0.2)
+
+    def check_match(self, sprite1: arcade.Sprite, sprite2: arcade.Sprite):
+        name1 = sprite1.get_name()
+        name2 = sprite2.get_name()
+        if name1 == name2:
+            return True
+        else:
+            return False
