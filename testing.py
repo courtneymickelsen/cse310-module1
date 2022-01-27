@@ -1,5 +1,4 @@
 import arcade
-
 # Constants
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 800

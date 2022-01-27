@@ -18,8 +18,9 @@ class Tiles():
                 y = self.get_y(spot)
                 self.positions.pop(self.positions.index(spot))
 
-                sprite = self.sprite_list.append(Tile(image, scale=0.1, center_x=x, center_y=y, spot= spot))
+                sprite1 = self.sprite_list.append(Tile(image, scale=0.1, center_x=x, center_y=y, spot= spot))
                 arcade.draw_rectangle_outline(x, y, constants.TILE_WIDTH -5, constants.TILE_HEIGHT -5, arcade.color.SALMON, 5)
+        # debugging
         # print(self.sprite_list)
         self.sprite_list.draw()
         arcade.finish_render()

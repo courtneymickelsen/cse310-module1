@@ -4,15 +4,6 @@ from game.tiles import Tiles
 from game.tile import Tile
 
 class CheckMatch():
-    """ You have to start and finish drawing in arcade using start_render() and finish_render().
-    open_window()
-    draw_rectangle() expects the x and y coordinates of the center of the rectangle, the width, and the height.
-    
-    Keyboard Input: .on_key_press(), .on_key_release()
-    Mouse Input: .on_mouse_press(), .on_mouse_release(), .on_mouse_motion()
-    Updating Game Object: .on_update()
-    Drawing: .on_draw()"""
-
     def __init__(self):
         pass
 
@@ -79,10 +70,14 @@ class CheckMatch():
     def check_match(self, sprites: arcade.SpriteList):
         name1 = sprites[0].image
         name2 = sprites[1].image
+        # debugging
         print(f'Comparing {name1} and {name2}:')
+        
         if name1 == name2:
+            # debugging
             print('You found a match!')
             return True
         else:
+            # debugging
             print('Keep looking!')
             return False
