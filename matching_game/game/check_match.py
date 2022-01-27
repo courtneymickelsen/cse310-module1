@@ -1,5 +1,7 @@
+from pydoc import cli
 import arcade
 from game.tiles import Tiles
+from game.tile import Tile
 
 class CheckMatch():
     """ You have to start and finish drawing in arcade using start_render() and finish_render().
@@ -64,15 +66,23 @@ class CheckMatch():
             row = 0
         return row
 
-    def get_tile(self, x, y,):
-        clicked_sprite_list = arcade.get_sprites_at_point((x, y), Tiles().sprite_list)
+    def show_image(self, x, y, sprite_list: arcade.SpriteList):
+        # for tile in Tiles().sprite_list:
+            # if tile.collides_with_point([x, y]):
+        
+        clicked_sprite_list = (arcade.get_sprites_at_point(point= [x, y], sprite_list = sprite_list))
+        print(clicked_sprite_list)
         for i in clicked_sprite_list:
-            i._set_scale(0.2)
+            # i.filename= i.path
+            i.flip( sprite_list)
 
-    def check_match(self, sprite1: arcade.Sprite, sprite2: arcade.Sprite):
-        name1 = sprite1.get_name()
-        name2 = sprite2.get_name()
+    def check_match(self, sprites: arcade.SpriteList):
+        name1 = sprites[0].image
+        name2 = sprites[1].image
+        print(f'Comparing {name1} and {name2}:')
         if name1 == name2:
+            print('You found a match!')
             return True
         else:
+            print('Keep looking!')
             return False

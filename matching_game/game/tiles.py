@@ -6,9 +6,9 @@ from game import constants
 
 class Tiles():
     def __init__(self):
-       self.images = ['abacus', 'watch', 'healthy', 'scooter' ,'reindeer', 'robot', 'rocket', 'science', 'gameboy', 'whale']
-       self.positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-       self.sprite_list = arcade.SpriteList()
+        self.images = ['abacus', 'watch', 'healthy', 'scooter' ,'reindeer', 'robot', 'rocket', 'science', 'gameboy', 'whale']
+        self.positions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        self.sprite_list = arcade.SpriteList()
 
     def create_tiles(self):
         for image in self.images:
@@ -18,10 +18,10 @@ class Tiles():
                 y = self.get_y(spot)
                 self.positions.pop(self.positions.index(spot))
 
-                sprite = Tile(image, scale=0.1, center_x=x, center_y=y, spot= spot)
-                self.sprite_list.append(sprite)
+                sprite = self.sprite_list.append(Tile(image, scale=0.1, center_x=x, center_y=y, spot= spot))
                 arcade.draw_rectangle_outline(x, y, constants.TILE_WIDTH -5, constants.TILE_HEIGHT -5, arcade.color.SALMON, 5)
-                sprite.draw()
+        # print(self.sprite_list)
+        self.sprite_list.draw()
         arcade.finish_render()
 
     def get_x(self, position):
