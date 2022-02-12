@@ -1,6 +1,6 @@
 import arcade
 import os
-from game import constants
+import constants
 from game.tiles import Tiles
 from game.check_match import CheckMatch
 

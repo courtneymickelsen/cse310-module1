@@ -2,7 +2,7 @@ import random
 import arcade
 import os
 from game.tile import Tile
-from game import constants
+import constants
 
 class Tiles():
     def __init__(self):
